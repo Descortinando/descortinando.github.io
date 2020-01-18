@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #000;
   color: #fff;
@@ -52,9 +56,9 @@ img {
 
       h2 {
         background: #fff;
-        position: absolute;
         display: flex;
         color: #000;
+        width: 100%;
       }
     }
   }
@@ -67,5 +71,28 @@ img {
 @media (min-width: 1200px) {
   .cortina .tag-wrapper .tag {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .lado-a-lado {
+    display: block;
+
+    .coluna {
+      width: auto;
+    }
+
+    a {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .title {
+        position: relative;
+
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
   }
 }
