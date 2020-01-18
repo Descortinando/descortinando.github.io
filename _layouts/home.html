@@ -3,29 +3,29 @@ layout: default
 ---
 
 <div class="home">
-  {% for post in site.data.posts %}
-    <div class="lado-a-lado">
-      <div class="coluna">
-        <h2>Cortina de Fumaça teste</h2>
-        <a href="https://www1.folha.uol.com.br/ilustrada/2020/01/roberto-alvim-pede-perdao-e-diz-que-associacao-com-nazismo-nao-foi-intencional.shtml">
-          <div class="title"><h2>Bolsonaro demite Roberto Alvim da Secretaria de Cultura</h2></div>
-          <img src="/assets/alvim.jpg" />
-        </a>
-      </div>
-
-      <div class="coluna">
-        <h2>Problema Ofuscado</h2>
-        <a target="_blank" href="https://www1.folha.uol.com.br/poder/2020/01/entenda-a-polemica-sobre-o-chefe-da-secom-de-bolsonaro-fabio-wajngarten.shtml">
-          <div class="title"><h2>Entenda a polêmica sobre o chefe da Secom de Bolsonaro, Fabio Wajngarten</h2></div>
-          <img src="/assets/wajngarten.jpg">
-        </a>
-      </div>
+  {% assign post = site.posts.first %}
+  <div class="lado-a-lado">
+    <div class="coluna">
+      <h2>Cortina de Fumaça</h2>
+      <a href="https://www1.folha.uol.com.br/ilustrada/2020/01/roberto-alvim-pede-perdao-e-diz-que-associacao-com-nazismo-nao-foi-intencional.shtml">
+        <div class="title"><h2>{{ post.cortina.titulo }}</h2></div>
+        <img src="/assets/alvim.jpg" />
+      </a>
     </div>
-  {% endfor %}
+
+    <div class="coluna">
+      <h2>Problema Ofuscado</h2>
+      <a target="_blank" href="https://www1.folha.uol.com.br/poder/2020/01/entenda-a-polemica-sobre-o-chefe-da-secom-de-bolsonaro-fabio-wajngarten.shtml">
+        <div class="title"><h2>{{ post.treta_real.titulo }}</h2></div>
+        <img src="/assets/wajngarten.jpg">
+      </a>
+    </div>
+  </div>
   <p>Ajude a divulgar o problema real:
-    <a target="_blank" href="http://twitter.com/share?text=text goes here&url=http://url goes here">Twitter</a> |
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://google.com" target="_blank">Facebook</a> |
-    <a href="whatsapp://send?text=Hello%20World!">Whatsapp</a>
+    <a target="_blank" href="http://twitter.com/share?text={{ post.title | cgi_escape }}&url={{ post.url | absolute_url | cgi_escape }}">Twitter</a> |
+    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | cgi_escape }}">Facebook</a> |
+    <a href="whatsapp://send?text={{ post.title | cgi_escape }}++{{ post.url | absolute_url | cgi_escape }}">Whatsapp</a> |
+    <a href="{{ post.url | relative_url }}">Link</a>
   </p>
   <p>Sempre que uma nova polêmica do Bolsonaro surgir, volte a visitar esse site, mostraremos o real problema</p>
   <br />
