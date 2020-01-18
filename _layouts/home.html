@@ -1,0 +1,37 @@
+---
+layout: default
+title: Foo bar
+---
+
+<div class="home">
+  {% for post in site.data.posts %}
+    <div class="lado-a-lado">
+      <div class="coluna">
+        <a href="https://www1.folha.uol.com.br/ilustrada/2020/01/roberto-alvim-pede-perdao-e-diz-que-associacao-com-nazismo-nao-foi-intencional.shtml">
+          <h2>Bolsonaro demite Roberto Alvim da Secretaria de Cultura</h2>
+          <div class="cortina">
+            <div class="tag-wrapper">
+              <div class="tag">Cortina de Fumaça</div>
+            </div>
+            <img src="/assets/alvim.jpg" />
+          </div>
+        </a>
+      </div>
+
+      <div class="coluna">
+        <a target="_blank" href="https://www1.folha.uol.com.br/poder/2020/01/entenda-a-polemica-sobre-o-chefe-da-secom-de-bolsonaro-fabio-wajngarten.shtml">
+          <h2>Entenda a polêmica sobre o chefe da Secom de Bolsonaro, Fabio Wajngarten</h2>
+          <img src="/assets/wajngarten.jpg">
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+  <p>Ajude a divulgar o problema real:
+    <a target="_blank" href="http://twitter.com/share?text=text goes here&url=http://url goes here">Twitter</a> |
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://google.com" target="_blank">Facebook</a> |
+    <a href="whatsapp://send?text=Hello%20World!">Whatsapp</a>
+  </p>
+  <p>Sempre que uma nova polêmica do Bolsonaro surgir, volte a visitar esse site, mostraremos qual é o real problema que estão tentando esconder</p>
+  <br />
+  <a href="/">Ver cortinas de fumaças anteriores</a>
+</div>
