@@ -38,6 +38,10 @@ img {
     text-align: center;
   }
 
+  img {
+    min-height: 100px;
+  }
+
   a {
     display: block;
     text-decoration: none;
@@ -95,4 +99,8 @@ img {
       }
     }
   }
+}
+
+.cortinas-anteriores {
+  margin-top: 100px;
 }
